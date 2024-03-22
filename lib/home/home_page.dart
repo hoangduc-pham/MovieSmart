@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
                   ],
                   options: CarouselOptions(
                     // Cấu hình các tùy chọn của CarouselSlider ở đây
-                    aspectRatio: 10/11,
+                    aspectRatio: 10 / 11,
                     // Tỷ lệ khung hình
                     autoPlay: true,
                     // Tự động chuyển ảnh
@@ -58,40 +58,57 @@ class HomePage extends StatelessWidget {
                 // ),
               ],
             ),
-            Text('Popular Movie',style: TextStyle(color: Colors.white,decoration: TextDecoration.none,fontSize: 16),),
+            Text(
+              'Popular Movie',
+              style: TextStyle(
+                  color: Colors.white, decoration: TextDecoration.none, fontSize: 16),
+            ),
             SizedBox(
-              height: 300,
-              child: ListView.builder(
-                shrinkWrap: true,
-                scrollDirection: Axis.horizontal,
-                // physics: const NeverScrollableScrollPhysics(),
-                itemCount: 6,
-                itemBuilder: (context, index) {
-                  return GestureDetector(
-                    onTap: () {
-                    },
-                    child: SizedBox(
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            ClipRRect(
-                              borderRadius:
-                              BorderRadius.circular(15),
-                              child: SizedBox.fromSize(
-                                  child:  Image.asset(
+                height: 300,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  // physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 6,
+                  itemBuilder: (context, index) {
+                    return GestureDetector(
+                      onTap: () {
+                        if (index == 0) {
+                          print('0');
+                        } else if (index == 1) {
+                          print('1');
+                        } else if (index == 2) {
+                          print('2');
+                        } else if (index == 3) {
+                          print('3');
+                        } else if (index == 4) {
+                          print('4');
+                        } else if (index == 5) {
+                          print('5');
+                        }
+                      },
+                      child: SizedBox(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(15),
+                                child: SizedBox.fromSize(
+                                  child: Image.asset(
                                     'assets/images/MV${index}.png',
-                                  ),),
-                            ),
-                            const SizedBox(height: 10),
-                          ],
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  );
-                },
-              )),
+                    );
+                  },
+                )),
           ],
         ),
       ),
