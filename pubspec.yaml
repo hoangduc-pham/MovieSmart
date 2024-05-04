@@ -38,6 +38,9 @@ dependencies:
   flutter_bloc: ^8.1.4
   equatable: ^2.0.5
   carousel_slider: ^4.2.1
+  sliding_clipped_nav_bar:
+    git:
+      url: https://github.com/watery-desert/sliding_clipped_nav_bar
 
 dev_dependencies:
   flutter_test:

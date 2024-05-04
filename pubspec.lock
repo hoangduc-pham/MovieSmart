@@ -192,6 +192,15 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sliding_clipped_nav_bar:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: HEAD
+      resolved-ref: c1d8e4b87fbfdcdea8355dcaa39344b7ceaad9eb
+      url: "https://github.com/watery-desert/sliding_clipped_nav_bar"
+    source: git
+    version: "3.1.1"
   source_span:
     dependency: transitive
     description:
